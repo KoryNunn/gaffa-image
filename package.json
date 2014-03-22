@@ -1,0 +1,22 @@
+{
+  "name": "gaffa-image",
+  "author": "Kory Nunn <knunn187@gmail.com>",
+  "version": "1.0.0",
+  "main": "image.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KoryNunn/gaffa-image.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/gaffa-image/issues"
+  },
+  "keywords": [
+    "gaffa",
+    "image",
+    "view"
+  ],
+  "peerDependencies": {
+    "gaffa": "^1.0.0"
+  },
+  "license": "MIT"
+}
