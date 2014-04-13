@@ -1,5 +1,4 @@
 var Gaffa = require('gaffa'),
-    viewType = "image",
     crel = require('crel'),
 	cachedElement;
 
@@ -13,17 +12,14 @@ function imageToURI(image, callback) {
 
 function Image(){}
 Image = Gaffa.createSpec(Image, Gaffa.View);
-Image.prototype.type = viewType;
+Image.prototype._type = 'image';
 
 Image.prototype.render = function(){
-    var renderedElement = crel('img');
-
-    this.renderedElement = renderedElement;
-
+    this.renderedElement = crel('img');
 };
 
 Image.prototype.source = new Gaffa.Property(function (viewModel, value) {
-    viewModel.renderedElement[value ? 'setAttribute' : 'removeAttribute']('src', value);
+    viewModel.renderedElement[value != null ? 'setAttribute' : 'removeAttribute']('src', value);
 });
 
 Image.prototype.image = new Gaffa.Property(function (viewModel, value) {
