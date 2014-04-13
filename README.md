@@ -1,7 +1,7 @@
 gaffa-image
 ===========
 
-image view for gaffa
+image view for [gaffa](https://github.com/gaffa-tape/gaffa-js)
 
 ## Install:
 
