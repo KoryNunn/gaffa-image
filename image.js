@@ -1,6 +1,6 @@
 var Gaffa = require('gaffa'),
     crel = require('crel'),
-	cachedElement;
+    cachedElement;
 
 function imageToURI(image, callback) {
     var reader = new window.FileReader();
@@ -20,6 +20,10 @@ Image.prototype.render = function(){
 
 Image.prototype.source = new Gaffa.Property(function (viewModel, value) {
     viewModel.renderedElement[value != null ? 'setAttribute' : 'removeAttribute']('src', value);
+});
+
+Image.prototype.alt = new Gaffa.Property(function (viewModel, value) {
+    viewModel.renderedElement[value != null ? 'setAttribute' : 'removeAttribute']('alt', value);
 });
 
 Image.prototype.image = new Gaffa.Property(function (viewModel, value) {
